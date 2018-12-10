@@ -1,0 +1,5 @@
+{
+  "server": {
+    "baseDir": ["./lite-server/src", "./build/contracts"]
+  }
+}

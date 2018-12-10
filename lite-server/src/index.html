@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+</head>
+<body>
+  <h1>GeneRelease status</h1>
+  <button id='get-status'>get latest status</button>
+  <button id='get-test'>test</button>
+  <hr>
+
+  <table id="mytable" border="1" cellspacing="3">
+    <tr>
+      <th> trait \ code</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+
+    <tr>
+      <th></th>
+      <th> 0 1 2 3 4 5 6 7 8 9</th>
+      <th> 0 1 2 3 4 5 6 7 8 9</th>
+      <th> 0 1 2 3 4 5 6 7 8 9</th>
+      <th> 0 1</th>
+      <th>
+      </tr>
+      <tr>
+        <th>0</th>
+        <td id="tc00">
+          0
+        </td>
+        <td id="tc01">
+          0
+        </td>
+        <td id="tc02">
+          0
+        </td>
+        <td id="tc03">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td id="tc10">
+          0
+        </td>
+        <td id="tc11">
+          0
+        </td>
+        <td id="tc12">
+          0
+        </td>
+        <td id="tc13">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td id="tc20">
+          0
+        </td>
+        <td id="tc21">
+          0
+        </td>
+        <td id="tc22">
+          0
+        </td>
+        <td id="tc23">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td id="tc30">
+          0
+        </td>
+        <td id="tc31">
+          0
+        </td>
+        <td id="tc32">
+          0
+        </td>
+        <td id="tc33">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td id="tc40">
+          0
+        </td>
+        <td id="tc41">
+          0
+        </td>
+        <td id="tc42">
+          0
+        </td>
+        <td id="tc43">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td id="tc50">
+          0
+        </td>
+        <td id="tc51">
+          0
+        </td>
+        <td id="tc52">
+          0
+        </td>
+        <td id="tc53">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td id="tc60">
+          0
+        </td>
+        <td id="tc61">
+          0
+        </td>
+        <td id="tc62">
+          0
+        </td>
+        <td id="tc63">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td id="tc70">
+          0
+        </td>
+        <td id="tc71">
+          0
+        </td>
+        <td id="tc72">
+          0
+        </td>
+        <td id="tc73">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td id="tc80">
+          0
+        </td>
+        <td id="tc81">
+          0
+        </td>
+        <td id="tc82">
+          0
+        </td>
+        <td id="tc83">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td id="tc90">
+          0
+        </td>
+        <td id="tc91">
+          0
+        </td>
+        <td id="tc92">
+          0
+        </td>
+        <td id="tc93">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td id="tc100">
+          0
+        </td>
+        <td id="tc101">
+          0
+        </td>
+        <td id="tc102">
+          0
+        </td>
+        <td id="tc103">
+          0
+        </td>
+      </tr>
+      <tr>
+        <th>11</th>
+        <td id="tc110">
+          0
+        </td>
+        <td id="tc111">
+          0
+        </td>
+        <td id="tc112">
+          0
+        </td>
+        <td id="tc113">
+          0
+        </td>
+      </tr>
+      <tbody></tbody>
+    </table>
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+    <script>
+    window.addEventListener('load', function() {
+      web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/sZoUPUrIYWbpve0L2tFq"))
+    });
+
+    let GR;
+
+    const start_sync = function() {
+      jQuery.getJSON("./GeneRelease.json", function(data) {
+        console.log(data.contractName);
+        // console.log(json_data);
+        GR = web3.eth.contract(data.abi).at('0xd917ef24a9f5f4c87d128597e826c325a4687297');
+
+        for (var trait = 0; trait <= 11; trait++) {
+          for (var code_iterate = 0; code_iterate <= 3; code_iterate++) {
+            get_status_of(trait, code_iterate, GR);
+          }
+        }
+      });
+    }
+
+    const get_status_of = function(trait, code_iterate, GR) {
+      let iterate = 10;
+      if (code_iterate == 3) iterate = 2;
+
+      const id = "#tc" + trait + code_iterate;
+      console.log(id);
+
+      let data = GR.isCodeReleased(trait, code_iterate * 10);
+      if (data == true) data = 1;
+      else data = 0;
+      console.log(data);
+
+      $(id).text(data);
+
+      for (var i = 1; i < iterate; i++) {
+        data = GR.isCodeReleased(trait, code_iterate * 10 + i);
+        if (data == true) data = 1;
+        else data = 0;
+        console.log(data);
+        $(id).append(' ' + data);
+      };
+    }
+
+
+    $('#get-status').click(function() {
+      start_sync();
+      // var time = new Date().toLocaleTimeString();
+      // $('#mytable > tbody:last').append('<tr><td>안녕 친구들 </td><td>' + time + '</td></tr>');
+    });
+
+    $('#get-test').click(function() {
+      id = "#tc" + 0 + 0;
+      console.log(id);
+      $(id).text('aa');
+      $(id).append(' aa');
+
+    })
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  </body>
+  </html>
