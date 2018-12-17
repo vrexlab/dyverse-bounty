@@ -14,7 +14,7 @@
 
 ### Scope
 
-- Dates : <b>9:01am GMT December 6th - 11:59pm GMT December 12th, 2018</b>
+- Dates : <b>9:50am GMT December 17th - 11:59pm GMT December 24th, 2018</b>
 - Network : Rinkeby test network 
 - Please help us identify any bug, vulnerability or malfunction in the <b>smart contract</b> such as:
   - Buying, transferring or breeding Kydys not working as intended
