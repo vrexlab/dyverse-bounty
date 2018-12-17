@@ -13,7 +13,6 @@ contract ClockAuctionBase is ERC721Holder {
         uint64 startedAt;
     }
 
-    // ERC721 public nonFungibleContract;
     ERC721Basic public nonFungibleContract;
 
     uint256 public ownerCut;
