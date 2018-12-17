@@ -2,17 +2,17 @@
 
 Dyverse is composed of 4 contracts. Details are as follows:
 
-##### KydyCore.sol - `0x1ba1d1f338bd0a0dab0d1fe7fe72d268c3b2ae05` - rinkeby
+##### KydyCore.sol - `0xf69d6cac7259559b1ab7c8e54844f85973462c9d` - rinkeby
 
 This contract holds most of our main features. Ownership info about Kydys are stored, and it also defines how creation of Gen 0 Kydys, synthesis between two Kydys and transfer of ownership takes place within the Dyverse. We will refer to this contact as the <i>Main</i>. 
 
-##### SaleClockAuction.sol - `0x205050ebd98452f2b5d6a4e3a1e85d1790d51666` - rinkeby
+##### SaleClockAuction.sol - `0xfcdd6e39e7716c01e9714098c600fb4356b4cedc` - rinkeby
 
 This essentially defines how our marketplace works. Owners can purchase Gen 0 Kydy via auction, and also sell the Kydys they own. A owner can cancel their Kydy on sale any time before its sale is complete. 
 
 We are noticeably different from other DApps in that we do not support a Dutch auction. We will be working to provide a better sales mechanism in the near future that does not require a Dutch auction. 
 
-##### SynthesizingClockAuction.sol - `0x4740f93bb119c45cba93022f6eaa97d276d5c2ce` - rinkeby
+##### SynthesizingClockAuction.sol - `0x6ca23f8b8ebb7f428709138b645c1bcab5e4c9d9` - rinkeby
 
 Synthesis (breeding) can take place between either 1) two of the owner's own Kydys or 2) with another user's Kydy. This contract defines how an owner can breed with another user's Kydy via auction in the Market.
 
@@ -40,12 +40,12 @@ The owner may transfer ownership by either 1) putting up their Kydy for a sale i
 # What users can do (main functions)
 
 - user can buy Kydys (Sale Auction `bid()`) 
-- user can transfer their own Kydy to another user (Main `transfer()`)
+- user can transfer their own Kydy to another user (Main `safeTransferFrom()`)
 - user can approve another user to take ownership of their own Kydy (Main `approve()`)
-- after approval, the new owner can claim a Kydy (Main `transferFrom()`)
+- after approval, the new owner can claim a Kydy (Main `safeTransferFrom()`)
 - user can get Kydy data (Main `getKydy()`)
 - user can get info of a Kydy that is on the auction (Sale/Synthesizing Auction `getAuction()`)
-- user can synthesize two of their own Kydys (Main `breedWith()` or `breedWithAuto()`)
+- user can synthesize two of their own Kydys (Main `synthesizeWith()` or `synthesizeWithAuto()`)
 - any one can create the child Kydy by calling this function, after the recharge period is expired (Main `giveBirth()`)
 - user can put up their Kydy as the Yang Kydy on auction for a fee (Main `createSynthesizingAuction()`)
 - user can also just approve using their Kydy as the Yang Kydy to another user (Main `approveSynthesizing()`)

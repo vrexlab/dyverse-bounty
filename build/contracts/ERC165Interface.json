@@ -1,0 +1,285 @@
+{
+  "contractName": "ERC165Interface",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\n\ncontract ERC165Interface {\n    /**\n     * @notice Query if a contract implements an interface\n     * @param interfaceID The interface identifier, as specified in ERC-165\n     * @dev Interface identification is specified in ERC-165. This function\n     *  uses less than 30,000 gas.\n     * @return `true` if the contract implements `interfaceID` and\n     *  `interfaceID` is not 0xffffffff, `false` otherwise\n     */\n    function supportsInterface(bytes4 interfaceID) external view returns (bool);\n}",
+  "sourcePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/ERC721Standard/ERC165Interface.sol",
+  "ast": {
+    "absolutePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/ERC721Standard/ERC165Interface.sol",
+    "exportedSymbols": {
+      "ERC165Interface": [
+        961
+      ]
+    },
+    "id": 962,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 953,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 961,
+        "linearizedBaseContracts": [
+          961
+        ],
+        "name": "ERC165Interface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Query if a contract implements an interface\n@param interfaceID The interface identifier, as specified in ERC-165\n@dev Interface identification is specified in ERC-165. This function\n uses less than 30,000 gas.\n@return `true` if the contract implements `interfaceID` and\n `interfaceID` is not 0xffffffff, `false` otherwise",
+            "id": 960,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 956,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 955,
+                  "name": "interfaceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "472:18:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 954,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "472:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "471:20:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 958,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "515:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 957,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "515:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "514:6:7"
+            },
+            "scope": 961,
+            "src": "445:76:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 962,
+        "src": "26:497:7"
+      }
+    ],
+    "src": "0:523:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/ERC721Standard/ERC165Interface.sol",
+    "exportedSymbols": {
+      "ERC165Interface": [
+        961
+      ]
+    },
+    "id": 962,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 953,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 961,
+        "linearizedBaseContracts": [
+          961
+        ],
+        "name": "ERC165Interface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Query if a contract implements an interface\n@param interfaceID The interface identifier, as specified in ERC-165\n@dev Interface identification is specified in ERC-165. This function\n uses less than 30,000 gas.\n@return `true` if the contract implements `interfaceID` and\n `interfaceID` is not 0xffffffff, `false` otherwise",
+            "id": 960,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 956,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 955,
+                  "name": "interfaceID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "472:18:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 954,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "472:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "471:20:7"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 958,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 960,
+                  "src": "515:4:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 957,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "515:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "514:6:7"
+            },
+            "scope": 961,
+            "src": "445:76:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 962,
+        "src": "26:497:7"
+      }
+    ],
+    "src": "0:523:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-12-17T03:59:06.913Z"
+}

@@ -25,10 +25,24 @@
       "type": "function"
     },
     {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "constant": false,
       "inputs": [
         {
-          "name": "_newOwner",
+          "name": "newOwner",
           "type": "address"
         }
       ],
@@ -37,18 +51,6 @@
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "name": "previousOwner",
-          "type": "address"
-        }
-      ],
-      "name": "OwnershipRenounced",
-      "type": "event"
     },
     {
       "anonymous": false,
@@ -82,40 +84,40 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610404806100536000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a6146100675780638da5cb5b1461007e57806399e132ed146100d5578063f2fde38b14610104575b600080fd5b34801561007357600080fd5b5061007c610147565b005b34801561008a57600080fd5b50610093610249565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100e157600080fd5b506100ea61026e565b604051808215151515815260200191505060405180910390f35b34801561011057600080fd5b50610145600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610277565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156101a257600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60006001905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102d257600080fd5b6102db816102de565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561031a57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058201827448d49c284210e1eba34ec54a430ca65cf12d860873cbdc86a1e151875eb0029",
-  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a6146100675780638da5cb5b1461007e57806399e132ed146100d5578063f2fde38b14610104575b600080fd5b34801561007357600080fd5b5061007c610147565b005b34801561008a57600080fd5b50610093610249565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100e157600080fd5b506100ea61026e565b604051808215151515815260200191505060405180910390f35b34801561011057600080fd5b50610145600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610277565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156101a257600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60006001905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156102d257600080fd5b6102db816102de565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561031a57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058201827448d49c284210e1eba34ec54a430ca65cf12d860873cbdc86a1e151875eb0029",
-  "sourceMap": "90:270:23:-;;;575:10:30;567:5;;:18;;;;;;;;;;;;;;;;;;90:270:23;;;;;;",
-  "deployedSourceMap": "90:270:23:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1001:111:30;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1001:111:30;;;;;;238:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;238:20:30;;;;;;;;;;;;;;;;;;;;;;;;;;;275:83:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;275:83:23;;;;;;;;;;;;;;;;;;;;;;;;;;;1274:103:30;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1274:103:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;1001:111;719:5;;;;;;;;;;;705:19;;:10;:19;;;697:28;;;;;;;;1077:5;;;;;;;;;;;1058:25;;;;;;;;;;;;1105:1;1089:5;;:18;;;;;;;;;;;;;;;;;;1001:111::o;238:20::-;;;;;;;;;;;;;:::o;275:83:23:-;324:4;347;340:11;;275:83;:::o;1274:103:30:-;719:5;;;;;;;;;;;705:19;;:10;:19;;;697:28;;;;;;;;1343:29;1362:9;1343:18;:29::i;:::-;1274:103;:::o;1512:171::-;1603:1;1582:23;;:9;:23;;;;1574:32;;;;;;;;1645:9;1617:38;;1638:5;;;;;;;;;;;1617:38;;;;;;;;;;;;1669:9;1661:5;;:17;;;;;;;;;;;;;;;;;;1512:171;:::o",
+  "bytecode": "0x6080604081905260008054600160a060020a0319163317808255600160a060020a0316917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a361026f806100576000396000f30060806040526004361061006c5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663715018a681146100715780638da5cb5b146100885780638f32d59b146100b957806399e132ed146100e2578063f2fde38b146100f7575b600080fd5b34801561007d57600080fd5b50610086610118565b005b34801561009457600080fd5b5061009d610182565b60408051600160a060020a039092168252519081900360200190f35b3480156100c557600080fd5b506100ce610191565b604080519115158252519081900360200190f35b3480156100ee57600080fd5b506100ce6101a2565b34801561010357600080fd5b50610086600160a060020a03600435166101a7565b610120610191565b151561012b57600080fd5b60008054604051600160a060020a03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b600054600160a060020a031690565b600054600160a060020a0316331490565b600190565b6101af610191565b15156101ba57600080fd5b6101c3816101c6565b50565b600160a060020a03811615156101db57600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820eb22b66522a6ee55d3db0c24d07ed47c01c23fde69d7ec9b97954504df9d87fd0029",
+  "deployedBytecode": "0x60806040526004361061006c5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663715018a681146100715780638da5cb5b146100885780638f32d59b146100b957806399e132ed146100e2578063f2fde38b146100f7575b600080fd5b34801561007d57600080fd5b50610086610118565b005b34801561009457600080fd5b5061009d610182565b60408051600160a060020a039092168252519081900360200190f35b3480156100c557600080fd5b506100ce610191565b604080519115158252519081900360200190f35b3480156100ee57600080fd5b506100ce6101a2565b34801561010357600080fd5b50610086600160a060020a03600435166101a7565b610120610191565b151561012b57600080fd5b60008054604051600160a060020a03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b600054600160a060020a031690565b600054600160a060020a0316331490565b600190565b6101af610191565b15156101ba57600080fd5b6101c3816101c6565b50565b600160a060020a03811615156101db57600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a72305820eb22b66522a6ee55d3db0c24d07ed47c01c23fde69d7ec9b97954504df9d87fd0029",
+  "sourceMap": "90:270:28:-;;;;;509:6:41;:19;;-1:-1:-1;;;;;;509:19:41;518:10;509:19;;;;-1:-1:-1;;;;;572:6:41;;539:40;;509:6;;539:40;90:270:28;;;;;;",
+  "deployedSourceMap": "90:270:28:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1273:127:41;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1273:127:41;;;;;;639:70;;8:9:-1;5:2;;;30:1;27;20:12;5:2;639:70:41;;;;;;;;-1:-1:-1;;;;;639:70:41;;;;;;;;;;;;;;926:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;926:83:41;;;;;;;;;;;;;;;;;;;;;;275::28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;275:83:28;;;;1561:101:41;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1561:101:41;-1:-1:-1;;;;;1561:101:41;;;;;1273:127;824:9;:7;:9::i;:::-;816:18;;;;;;;;1367:1;1351:6;;1330:40;;-1:-1:-1;;;;;1351:6:41;;;;1330:40;;1367:1;;1330:40;1393:1;1376:19;;-1:-1:-1;;1376:19:41;;;1273:127::o;639:70::-;676:7;698:6;-1:-1:-1;;;;;698:6:41;639:70;:::o;926:83::-;965:4;998:6;-1:-1:-1;;;;;998:6:41;984:10;:20;;926:83::o;275::28:-;347:4;275:83;:::o;1561:101:41:-;824:9;:7;:9::i;:::-;816:18;;;;;;;;1629:28;1648:8;1629:18;:28::i;:::-;1561:101;:::o;1796:169::-;-1:-1:-1;;;;;1865:22:41;;;;1857:31;;;;;;1920:6;;;1899:38;;-1:-1:-1;;;;;1899:38:41;;;;1920:6;;;1899:38;;;1943:6;:17;;-1:-1:-1;;1943:17:41;-1:-1:-1;;;;;1943:17:41;;;;;;;;;;1796:169::o",
   "source": "pragma solidity 0.4.24;\n\nimport \"openzeppelin-solidity/contracts/ownership/Ownable.sol\";\n\ncontract KydyTravelConf is Ownable {\n    \n    mapping(uint256 => KydyType) kydyTypeInfo;\n\n    struct KydyType {\n        uint256 typeId;\n        uint256 production; // 1 ~ 10\n    }\n\n    function isKydyTravelConf() public pure returns (bool) {\n        return true;\n    }\n}",
   "sourcePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/Travel/KydyTravelConf.sol",
   "ast": {
     "absolutePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/Travel/KydyTravelConf.sol",
     "exportedSymbols": {
       "KydyTravelConf": [
-        4806
+        5437
       ]
     },
-    "id": 4807,
+    "id": 5438,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4785,
+        "id": 5416,
         "literals": [
           "solidity",
           "0.4",
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:23"
+        "src": "0:23:28"
       },
       {
         "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 4786,
+        "id": 5417,
         "nodeType": "ImportDirective",
-        "scope": 4807,
-        "sourceUnit": 5657,
-        "src": "25:63:23",
+        "scope": 5438,
+        "sourceUnit": 7138,
+        "src": "25:63:28",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -125,75 +127,75 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 4787,
+              "id": 5418,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5656,
-              "src": "117:7:23",
+              "referencedDeclaration": 7137,
+              "src": "117:7:28",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$5656",
+                "typeIdentifier": "t_contract$_Ownable_$7137",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 4788,
+            "id": 5419,
             "nodeType": "InheritanceSpecifier",
-            "src": "117:7:23"
+            "src": "117:7:28"
           }
         ],
         "contractDependencies": [
-          5656
+          7137
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 4806,
+        "id": 5437,
         "linearizedBaseContracts": [
-          4806,
-          5656
+          5437,
+          7137
         ],
         "name": "KydyTravelConf",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4792,
+            "id": 5423,
             "name": "kydyTypeInfo",
             "nodeType": "VariableDeclaration",
-            "scope": 4806,
-            "src": "136:41:23",
+            "scope": 5437,
+            "src": "136:41:28",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$4797_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$5428_storage_$",
               "typeString": "mapping(uint256 => struct KydyTravelConf.KydyType)"
             },
             "typeName": {
-              "id": 4791,
+              "id": 5422,
               "keyType": {
-                "id": 4789,
+                "id": 5420,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "144:7:23",
+                "src": "144:7:28",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "136:28:23",
+              "src": "136:28:28",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$4797_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$5428_storage_$",
                 "typeString": "mapping(uint256 => struct KydyTravelConf.KydyType)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 4790,
+                "id": 5421,
                 "name": "KydyType",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 4797,
-                "src": "155:8:23",
+                "referencedDeclaration": 5428,
+                "src": "155:8:28",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_KydyType_$4797_storage_ptr",
+                  "typeIdentifier": "t_struct$_KydyType_$5428_storage_ptr",
                   "typeString": "struct KydyTravelConf.KydyType"
                 }
               }
@@ -203,15 +205,15 @@
           },
           {
             "canonicalName": "KydyTravelConf.KydyType",
-            "id": 4797,
+            "id": 5428,
             "members": [
               {
                 "constant": false,
-                "id": 4794,
+                "id": 5425,
                 "name": "typeId",
                 "nodeType": "VariableDeclaration",
-                "scope": 4797,
-                "src": "210:14:23",
+                "scope": 5428,
+                "src": "210:14:28",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -219,10 +221,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 4793,
+                  "id": 5424,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "210:7:23",
+                  "src": "210:7:28",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -233,11 +235,11 @@
               },
               {
                 "constant": false,
-                "id": 4796,
+                "id": 5427,
                 "name": "production",
                 "nodeType": "VariableDeclaration",
-                "scope": 4797,
-                "src": "234:18:23",
+                "scope": 5428,
+                "src": "234:18:28",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -245,10 +247,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 4795,
+                  "id": 5426,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "234:7:23",
+                  "src": "234:7:28",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -260,28 +262,28 @@
             ],
             "name": "KydyType",
             "nodeType": "StructDefinition",
-            "scope": 4806,
-            "src": "184:85:23",
+            "scope": 5437,
+            "src": "184:85:28",
             "visibility": "public"
           },
           {
             "body": {
-              "id": 4804,
+              "id": 5435,
               "nodeType": "Block",
-              "src": "330:28:23",
+              "src": "330:28:28",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 4802,
+                    "id": 5433,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "347:4:23",
+                    "src": "347:4:28",
                     "subdenomination": null,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -289,15 +291,15 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 4801,
-                  "id": 4803,
+                  "functionReturnParameters": 5432,
+                  "id": 5434,
                   "nodeType": "Return",
-                  "src": "340:11:23"
+                  "src": "340:11:28"
                 }
               ]
             },
             "documentation": null,
-            "id": 4805,
+            "id": 5436,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -305,23 +307,23 @@
             "name": "isKydyTravelConf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4798,
+              "id": 5429,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "300:2:23"
+              "src": "300:2:28"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4801,
+              "id": 5432,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4800,
+                  "id": 5431,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4805,
-                  "src": "324:4:23",
+                  "scope": 5436,
+                  "src": "324:4:28",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -329,10 +331,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4799,
+                    "id": 5430,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "324:4:23",
+                    "src": "324:4:28",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -342,49 +344,49 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "323:6:23"
+              "src": "323:6:28"
             },
-            "scope": 4806,
-            "src": "275:83:23",
+            "scope": 5437,
+            "src": "275:83:28",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4807,
-        "src": "90:270:23"
+        "scope": 5438,
+        "src": "90:270:28"
       }
     ],
-    "src": "0:360:23"
+    "src": "0:360:28"
   },
   "legacyAST": {
     "absolutePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/Travel/KydyTravelConf.sol",
     "exportedSymbols": {
       "KydyTravelConf": [
-        4806
+        5437
       ]
     },
-    "id": 4807,
+    "id": 5438,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4785,
+        "id": 5416,
         "literals": [
           "solidity",
           "0.4",
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:23"
+        "src": "0:23:28"
       },
       {
         "absolutePath": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 4786,
+        "id": 5417,
         "nodeType": "ImportDirective",
-        "scope": 4807,
-        "sourceUnit": 5657,
-        "src": "25:63:23",
+        "scope": 5438,
+        "sourceUnit": 7138,
+        "src": "25:63:28",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -394,75 +396,75 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 4787,
+              "id": 5418,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 5656,
-              "src": "117:7:23",
+              "referencedDeclaration": 7137,
+              "src": "117:7:28",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$5656",
+                "typeIdentifier": "t_contract$_Ownable_$7137",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 4788,
+            "id": 5419,
             "nodeType": "InheritanceSpecifier",
-            "src": "117:7:23"
+            "src": "117:7:28"
           }
         ],
         "contractDependencies": [
-          5656
+          7137
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 4806,
+        "id": 5437,
         "linearizedBaseContracts": [
-          4806,
-          5656
+          5437,
+          7137
         ],
         "name": "KydyTravelConf",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 4792,
+            "id": 5423,
             "name": "kydyTypeInfo",
             "nodeType": "VariableDeclaration",
-            "scope": 4806,
-            "src": "136:41:23",
+            "scope": 5437,
+            "src": "136:41:28",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$4797_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$5428_storage_$",
               "typeString": "mapping(uint256 => struct KydyTravelConf.KydyType)"
             },
             "typeName": {
-              "id": 4791,
+              "id": 5422,
               "keyType": {
-                "id": 4789,
+                "id": 5420,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "144:7:23",
+                "src": "144:7:28",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "136:28:23",
+              "src": "136:28:28",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$4797_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_KydyType_$5428_storage_$",
                 "typeString": "mapping(uint256 => struct KydyTravelConf.KydyType)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 4790,
+                "id": 5421,
                 "name": "KydyType",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 4797,
-                "src": "155:8:23",
+                "referencedDeclaration": 5428,
+                "src": "155:8:28",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_KydyType_$4797_storage_ptr",
+                  "typeIdentifier": "t_struct$_KydyType_$5428_storage_ptr",
                   "typeString": "struct KydyTravelConf.KydyType"
                 }
               }
@@ -472,15 +474,15 @@
           },
           {
             "canonicalName": "KydyTravelConf.KydyType",
-            "id": 4797,
+            "id": 5428,
             "members": [
               {
                 "constant": false,
-                "id": 4794,
+                "id": 5425,
                 "name": "typeId",
                 "nodeType": "VariableDeclaration",
-                "scope": 4797,
-                "src": "210:14:23",
+                "scope": 5428,
+                "src": "210:14:28",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -488,10 +490,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 4793,
+                  "id": 5424,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "210:7:23",
+                  "src": "210:7:28",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -502,11 +504,11 @@
               },
               {
                 "constant": false,
-                "id": 4796,
+                "id": 5427,
                 "name": "production",
                 "nodeType": "VariableDeclaration",
-                "scope": 4797,
-                "src": "234:18:23",
+                "scope": 5428,
+                "src": "234:18:28",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -514,10 +516,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 4795,
+                  "id": 5426,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-                  "src": "234:7:23",
+                  "src": "234:7:28",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -529,28 +531,28 @@
             ],
             "name": "KydyType",
             "nodeType": "StructDefinition",
-            "scope": 4806,
-            "src": "184:85:23",
+            "scope": 5437,
+            "src": "184:85:28",
             "visibility": "public"
           },
           {
             "body": {
-              "id": 4804,
+              "id": 5435,
               "nodeType": "Block",
-              "src": "330:28:23",
+              "src": "330:28:28",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 4802,
+                    "id": 5433,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "347:4:23",
+                    "src": "347:4:28",
                     "subdenomination": null,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -558,15 +560,15 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 4801,
-                  "id": 4803,
+                  "functionReturnParameters": 5432,
+                  "id": 5434,
                   "nodeType": "Return",
-                  "src": "340:11:23"
+                  "src": "340:11:28"
                 }
               ]
             },
             "documentation": null,
-            "id": 4805,
+            "id": 5436,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -574,23 +576,23 @@
             "name": "isKydyTravelConf",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4798,
+              "id": 5429,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "300:2:23"
+              "src": "300:2:28"
             },
             "payable": false,
             "returnParameters": {
-              "id": 4801,
+              "id": 5432,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4800,
+                  "id": 5431,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4805,
-                  "src": "324:4:23",
+                  "scope": 5436,
+                  "src": "324:4:28",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -598,10 +600,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 4799,
+                    "id": 5430,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "324:4:23",
+                    "src": "324:4:28",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -611,711 +613,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "323:6:23"
+              "src": "323:6:28"
             },
-            "scope": 4806,
-            "src": "275:83:23",
+            "scope": 5437,
+            "src": "275:83:28",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 4807,
-        "src": "90:270:23"
+        "scope": 5438,
+        "src": "90:270:28"
       }
     ],
-    "src": "0:360:23"
+    "src": "0:360:28"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
-  "networks": {
-    "4": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xc2dbadc59d806a1f668d5b66fbc2844dc58dcc7e",
-      "transactionHash": "0x8d864d84bce4189d33a75b58fc08fdaee42f30b2235b197c0157d59b630701dd"
-    },
-    "1539708404466": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x9badc582c8a1e96f2ac1a144aa2884b445a1e76f",
-      "transactionHash": "0x0a9e3f320305626fba8640394e60a2a830a219215f522bca58b8cc0f30e72d18"
-    },
-    "1540029061906": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x8eda8de0f7a6f1e6bed24f06680baf08b4eaa390",
-      "transactionHash": "0x9b8cbd896b84119b4c51570d108274105ef7f0636f59761f1520ef0ef6fe3f33"
-    },
-    "1540780487268": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x935cafdaef3205b9d42a72e51a381121e3e53c6e",
-      "transactionHash": "0x067fa60f591291b01cf5b0a39ca518a6c4f9a11e3bcfefcb15e0a828e664c645"
-    },
-    "1540868033680": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x76cb84979ce2bd4404945ec6ef6280d9fc37f4a6",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1540970385015": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x7a4b41046b8052f9cd5ca356c5adf7231e7e7fda",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541047977700": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x458763b484c16806738225caf03ef874af327b94",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541124903079": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x5664eda727c7319f6bfce86f95448232b63d406d",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541336386775": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xb078bc23438ff1669c296b8ba3456f9b5a2d7f73",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541351614341": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xeb0ed17eba126b74a3cb1821e4981ec81823c12c",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541385558909": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xe9d01627907295ae360987709ca21248bc693e84",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541470500757": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x511646029eb447a95fe1331256eb01897237557b",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541561236404": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xcfd6f2551cbae28f3d82b1c8c445745e54aa7704",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541645073486": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x56b41438a214d97aadb8b04db074565d6951ef7e",
-      "transactionHash": "0xbb94d3b733d8436bafee79833ff623b7806a5dbcbfbfb96eb48455a936d4cf4d"
-    },
-    "1541740395717": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x5402efc6bd6b72b7a565fac599d263ad4a7b25cb",
-      "transactionHash": "0x5728c592fdfc67d95e1d5d98fdde7a928ff02982af92a11519f5ee58d8ad07fa"
-    },
-    "1541756017386": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x728da5cf2a0828e28c3de39af0152c8b1363075b",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1541829930616": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x16349922d64ae18d05214d2964e8c69b9069f967",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1542006118269": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x5d32b6de8d256523a4b9772f98c33d3661f1bcca",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    },
-    "1542009890469": {
-      "events": {
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0x49a2b82acd99a88ca3c1c2e8cc243c02dbe8f4a6",
-      "transactionHash": "0xbd3e75ec46ce095e2ec106fd241c72883b32f803dc060a5a2073403263d06c61"
-    }
-  },
+  "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-11-12T08:05:20.938Z"
+  "updatedAt": "2018-12-13T10:21:24.761Z"
 }

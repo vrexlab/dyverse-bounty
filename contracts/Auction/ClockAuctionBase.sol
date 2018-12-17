@@ -1,8 +1,11 @@
 pragma solidity ^0.4.24;
 
-import "./../ERC721Draft.sol";
+import "./../ERC721Standard/ERC721Basic.sol";
+import "./../ERC721Standard/ERC721Holder.sol";
+import "./../math/SafeMath.sol";
 
-contract ClockAuctionBase {
+contract ClockAuctionBase is ERC721Holder {
+    using SafeMath for uint256;
 
     struct Auction {
         address seller;
@@ -10,7 +13,8 @@ contract ClockAuctionBase {
         uint64 startedAt;
     }
 
-    ERC721 public nonFungibleContract;
+    // ERC721 public nonFungibleContract;
+    ERC721Basic public nonFungibleContract;
 
     uint256 public ownerCut;
 
@@ -37,11 +41,11 @@ contract ClockAuctionBase {
     }
 
     function _escrow(address _owner, uint256 _tokenId) internal {
-        nonFungibleContract.transferFrom(_owner, this, _tokenId);
+        nonFungibleContract.safeTransferFrom(_owner, this, _tokenId);
     }
 
     function _transfer(address _receiver, uint256 _tokenId) internal {
-        nonFungibleContract.transfer(_receiver, _tokenId);
+        nonFungibleContract.safeTransferFrom(this, _receiver, _tokenId);
     }
 
     function _addAuction(uint256 _tokenId, Auction _auction) internal {
@@ -76,7 +80,7 @@ contract ClockAuctionBase {
 
         if (price > 0) {
             uint256 auctioneerCut = _computeCut(price);
-            uint256 sellerProceeds = price - auctioneerCut;
+            uint256 sellerProceeds = price.sub(auctioneerCut);
 
             seller.transfer(sellerProceeds);
         }
@@ -103,7 +107,7 @@ contract ClockAuctionBase {
     }
 
     function _computeCut(uint256 _price) internal view returns (uint256) {
-        return _price * ownerCut / 10000;
+        return _price.mul(ownerCut).div(10000);
     }
 
 }

@@ -42,7 +42,8 @@ contract KydyMinting is KydyAuction {
     function _computeNextGen0Price() internal view returns (uint256) {
         uint256 avePrice = saleAuction.averageGen0SalePrice();
 
-        require(avePrice < 340282366920938463463374607431768211455);
+        // Sanity check to ensure we don't overflow arithmetic
+        require(avePrice == uint256(uint128(avePrice)));
 
         uint256 nextPrice = avePrice + (avePrice / 2);
 

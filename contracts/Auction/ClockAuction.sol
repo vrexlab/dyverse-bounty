@@ -1,6 +1,6 @@
 pragma solidity ^0.4.24;
 
-import "./../ERC721Draft.sol";
+import "./../ERC721Standard/ERC721Basic.sol";
 import "./ClockAuctionBase.sol";
 import "./Pausable.sol";
 
@@ -10,8 +10,7 @@ contract ClockAuction is Pausable, ClockAuctionBase {
         require(_cut <= 10000);
         ownerCut = _cut;
 
-        ERC721 candidateContract = ERC721(_nftAddress);
-        require(candidateContract.implementsERC721());
+        ERC721Basic candidateContract = ERC721Basic(_nftAddress);
         nonFungibleContract = candidateContract;
     }
 

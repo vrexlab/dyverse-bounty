@@ -2,6 +2,12 @@ var HDWalletProvider = require("truffle-hdwallet-provider");
 var mnemonic = "";
 
 module.exports = {
+	solc: {
+		optimizer: {
+		  enabled: true,
+		  runs: 200
+		}
+	},
 	networks: {
 		development: { // main development environment is Ganache
 			host: "127.0.0.1",

@@ -45,14 +45,14 @@
     "absolutePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/ExternalInterfaces/KydyUtilInterface.sol",
     "exportedSymbols": {
       "KydyUtilInterface": [
-        1013
+        1241
       ]
     },
-    "id": 1014,
+    "id": 1242,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1000,
+        "id": 1228,
         "literals": [
           "solidity",
           "^",
@@ -60,7 +60,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:14"
       },
       {
         "baseContracts": [],
@@ -68,9 +68,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1013,
+        "id": 1241,
         "linearizedBaseContracts": [
-          1013
+          1241
         ],
         "name": "KydyUtilInterface",
         "nodeType": "ContractDefinition",
@@ -78,7 +78,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1005,
+            "id": 1233,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -86,23 +86,23 @@
             "name": "isKydyUtil",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1001,
+              "id": 1229,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "78:2:9"
+              "src": "78:2:14"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1004,
+              "id": 1232,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1003,
+                  "id": 1231,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1005,
-                  "src": "102:4:9",
+                  "scope": 1233,
+                  "src": "102:4:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -110,10 +110,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1002,
+                    "id": 1230,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "102:4:9",
+                    "src": "102:4:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -123,10 +123,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "101:6:9"
+              "src": "101:6:14"
             },
-            "scope": 1013,
-            "src": "59:49:9",
+            "scope": 1241,
+            "src": "59:49:14",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -134,7 +134,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1012,
+            "id": 1240,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -142,16 +142,16 @@
             "name": "getRand",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1008,
+              "id": 1236,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1007,
+                  "id": 1235,
                   "name": "tempSeed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1012,
-                  "src": "131:16:9",
+                  "scope": 1240,
+                  "src": "131:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -159,10 +159,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1006,
+                    "id": 1234,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "131:7:9",
+                    "src": "131:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -172,20 +172,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "130:18:9"
+              "src": "130:18:14"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1011,
+              "id": 1239,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1010,
+                  "id": 1238,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1012,
-                  "src": "164:7:9",
+                  "scope": 1240,
+                  "src": "164:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -193,10 +193,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1009,
+                    "id": 1237,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "164:7:9",
+                    "src": "164:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -206,33 +206,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "163:9:9"
+              "src": "163:9:14"
             },
-            "scope": 1013,
-            "src": "114:59:9",
+            "scope": 1241,
+            "src": "114:59:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1014,
-        "src": "26:149:9"
+        "scope": 1242,
+        "src": "26:149:14"
       }
     ],
-    "src": "0:176:9"
+    "src": "0:176:14"
   },
   "legacyAST": {
     "absolutePath": "/Users/Keki/Vrexlab/kydy-solidity/contracts/ExternalInterfaces/KydyUtilInterface.sol",
     "exportedSymbols": {
       "KydyUtilInterface": [
-        1013
+        1241
       ]
     },
-    "id": 1014,
+    "id": 1242,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1000,
+        "id": 1228,
         "literals": [
           "solidity",
           "^",
@@ -240,7 +240,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:9"
+        "src": "0:24:14"
       },
       {
         "baseContracts": [],
@@ -248,9 +248,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 1013,
+        "id": 1241,
         "linearizedBaseContracts": [
-          1013
+          1241
         ],
         "name": "KydyUtilInterface",
         "nodeType": "ContractDefinition",
@@ -258,7 +258,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1005,
+            "id": 1233,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -266,23 +266,23 @@
             "name": "isKydyUtil",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1001,
+              "id": 1229,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "78:2:9"
+              "src": "78:2:14"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1004,
+              "id": 1232,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1003,
+                  "id": 1231,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1005,
-                  "src": "102:4:9",
+                  "scope": 1233,
+                  "src": "102:4:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -290,10 +290,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1002,
+                    "id": 1230,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "102:4:9",
+                    "src": "102:4:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -303,10 +303,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "101:6:9"
+              "src": "101:6:14"
             },
-            "scope": 1013,
-            "src": "59:49:9",
+            "scope": 1241,
+            "src": "59:49:14",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -314,7 +314,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 1012,
+            "id": 1240,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -322,16 +322,16 @@
             "name": "getRand",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1008,
+              "id": 1236,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1007,
+                  "id": 1235,
                   "name": "tempSeed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1012,
-                  "src": "131:16:9",
+                  "scope": 1240,
+                  "src": "131:16:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -339,10 +339,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1006,
+                    "id": 1234,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "131:7:9",
+                    "src": "131:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -352,20 +352,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "130:18:9"
+              "src": "130:18:14"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1011,
+              "id": 1239,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1010,
+                  "id": 1238,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1012,
-                  "src": "164:7:9",
+                  "scope": 1240,
+                  "src": "164:7:14",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -373,10 +373,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1009,
+                    "id": 1237,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "164:7:9",
+                    "src": "164:7:14",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -386,20 +386,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "163:9:9"
+              "src": "163:9:14"
             },
-            "scope": 1013,
-            "src": "114:59:9",
+            "scope": 1241,
+            "src": "114:59:14",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1014,
-        "src": "26:149:9"
+        "scope": 1242,
+        "src": "26:149:14"
       }
     ],
-    "src": "0:176:9"
+    "src": "0:176:14"
   },
   "compiler": {
     "name": "solc",
@@ -407,5 +407,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-29T02:35:16.133Z"
+  "updatedAt": "2018-12-07T09:34:59.788Z"
 }

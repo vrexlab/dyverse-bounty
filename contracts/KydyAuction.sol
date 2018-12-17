@@ -1,11 +1,11 @@
 pragma solidity ^0.4.24;
 
-import "./KydyBreeding.sol";
+import "./KydySynthesizing.sol";
 import "./Auction/ClockAuction.sol";
 import "./Auction/SynthesizingClockAuction.sol";
 import "./Auction/SaleClockAuction.sol";
 
-contract KydyAuction is KydyBreeding {
+contract KydyAuction is KydySynthesizing {
 
     SaleClockAuction public saleAuction;
 
@@ -35,7 +35,7 @@ contract KydyAuction is KydyBreeding {
         whenNotPaused
     {
         require(_owns(msg.sender, _kydyId));
-        _approve(_kydyId, saleAuction);
+        approve(saleAuction, _kydyId);
         saleAuction.createAuction(
             _kydyId,
             _price,
@@ -51,8 +51,8 @@ contract KydyAuction is KydyBreeding {
         whenNotPaused
     {
         require(_owns(msg.sender, _kydyId));
-        require(isReadyToBreed(_kydyId));
-        _approve(_kydyId, synthesizingAuction);
+        require(isReadyToSynthesize(_kydyId));
+        approve(synthesizingAuction, _kydyId);
         synthesizingAuction.createAuction(
             _kydyId,
             _price,
@@ -69,14 +69,14 @@ contract KydyAuction is KydyBreeding {
         whenNotPaused
     {
         require(_owns(msg.sender, _yinId));
-        require(isReadyToBreed(_yinId));
-        require(_canBreedWithViaAuction(_yinId, _yangId));
+        require(isReadyToSynthesize(_yinId));
+        require(_canSynthesizeWithViaAuction(_yinId, _yangId));
         uint256 currPrice = synthesizingAuction.getCurrentPrice(_yangId);
 
         require (msg.value >= currPrice + autoBirthFee);
 
         synthesizingAuction.bid.value(msg.value - autoBirthFee)(_yangId);
-        _breedWith(uint32(_yinId), uint32(_yangId));
+        _synthesizeWith(uint32(_yinId), uint32(_yangId));
     }
 
     function withdrawAuctionBalances() external onlyCOO {

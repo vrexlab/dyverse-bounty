@@ -86,11 +86,4 @@ contract KydyCore is KydyMinting {
     function setTravelCore(address _newTravelCore) public onlyCEO whenPaused {
         travelCore = KydyTravelInterface(_newTravelCore);
     }
-
-    function _transfer(address _from, address _to, uint256 _tokenId) internal {
-        super._transfer(_from, _to, _tokenId);
-        if (address(travelCore) != address(0)) {
-            travelCore.transferTTProduction(_from, _to, _tokenId);
-        }
-    }
 }
