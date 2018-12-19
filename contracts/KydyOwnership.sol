@@ -207,7 +207,14 @@ contract KydyOwnership is KydyBase {
         return kydys.length - 1;
     }
 
-    // Never call this function in smart contract. It's only for web3.
+    /**
+     * @notice Returns a list of all Kydy IDs assigned to an address.
+     * @param _owner The owner whose Kydys we are interested in.
+     * @dev This method MUST NEVER be called by smart contract code. First, it's fairly
+     *  expensive (it walks the entire Kydy array looking for kydys belonging to owner),
+     *  but it also returns a dynamic array, which is only supported for web3 calls, and
+     *  not contract-to-contract calls.
+     */
     function tokensOfOwner(address _owner) external view returns(uint256[] ownerTokens) {
         uint256 tokenCount = balanceOf(_owner);
 
