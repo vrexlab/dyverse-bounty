@@ -4,10 +4,10 @@ import "./KydyAuction.sol";
 
 contract KydyMinting is KydyAuction {
 
-    uint256 public promoCreationLimit = 888;
-    uint256 public gen0CreationLimit = 8888;
+    uint256 public constant promoCreationLimit = 888;
+    uint256 public constant gen0CreationLimit = 8888;
 
-    uint256 public gen0StartingPrice = 10 finney;
+    uint256 public constant gen0StartingPrice = 10 finney;
 
     uint256 public promoCreatedCount;
     uint256 public gen0CreatedCount;

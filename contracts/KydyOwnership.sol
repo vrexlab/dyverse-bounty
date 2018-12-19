@@ -7,8 +7,8 @@ import "./lib/Strings.sol";
 contract KydyOwnership is KydyBase {
     using Strings for string;
 
-    string private _name = "Dyverse";
-    string private _symbol = "KYDY";
+    string private constant _name = "Dyverse";
+    string private constant _symbol = "KYDY";
 
     // Base Server Address for Token MetaData URI
     string internal tokenURIBase = "http://testapi.dyver.se/api/KydyMetadata/";
