@@ -87,13 +87,14 @@ contract KydyAuction is KydySynthesizing {
     function cancelSaleAuction(
         uint256 _kydyId
     )
-        public
+        external
         whenNotPaused
     {
         require(_owns(saleAuction, _kydyId));
-        address _seller = msg.sender;
-        _approve(_kydyId, _seller);
-        saleAuction.cancelAuction(_kydyId, _seller);
+        (address seller,,) = saleAuction.getAuction(_kydyId);
+        require(msg.sender == seller);
+        _approve(_kydyId, msg.sender);
+        saleAuction.cancelAuction(_kydyId, msg.sender);
     }
 
     function cancelSynthesizingAuction(

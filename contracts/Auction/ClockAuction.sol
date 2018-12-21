@@ -53,8 +53,9 @@ contract ClockAuction is Pausable, ClockAuctionBase {
     }
 
     function cancelAuction(uint256 _tokenId, address _seller)
-        public
+        external
     {
+        require(msg.sender == address(nonFungibleContract));
         Auction storage auction = tokenIdToAuction[_tokenId];
         require(_isOnAuction(auction));
         address seller = auction.seller;
