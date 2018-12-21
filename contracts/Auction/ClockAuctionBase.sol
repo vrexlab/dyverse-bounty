@@ -26,12 +26,12 @@ contract ClockAuctionBase is ERC721Holder {
     function() external {}
 
     modifier canBeStoredWith64Bits(uint256 _value) {
-        require(_value <= 18446744073709551615);
+        require(_value <= (2**64 - 1));
         _;
     }
 
     modifier canBeStoredWith128Bits(uint256 _value) {
-        require(_value < 340282366920938463463374607431768211455);
+        require(_value < (2**128 - 1));
         _;
     }
 
