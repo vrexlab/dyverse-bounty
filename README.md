@@ -1,4 +1,4 @@
-# The Dyverse Bounty Hunt is soon LIVE!
+# The Dyverse Bounty Hunt is Now CLOSED
 
 :boom: **Check out our Kickstarter campaign [here](https://www.kickstarter.com/projects/vrexlab/kydys-in-the-dyverse-unique-diy-toys-you-can-own-f)!**
 
